@@ -1,0 +1,226 @@
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  width: 80%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 2px 5px #1c1c1c6b;
+  border-radius: 40px;
+  background: linear-gradient(to right, blue, rgb(0, 0, 189));
+  animation: nav_transition 0.5s;
+}
+@keyframes nav_transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes text_transition {
+  0% {
+    transform: translate(150px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@keyframes text_transition_02 {
+  0% {
+    transform: translate(-150px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+nav a {
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 200;
+  color: rgb(255, 251, 251);
+  font-family: "Roboto", sans-serif;
+}
+nav a:hover {
+  letter-spacing: 1px;
+  transition: 0.2s;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.simbolo_div {
+  display: flex;
+  width: 170px;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  animation: nav_transition 0.7s;
+}
+.simbolo_div h1 {
+  font-size: 22px;
+}
+.menu-button {
+  display: none;
+}
+.span {
+  font-weight: 200;
+}
+
+/* Telas pequenas (celulares em pé) */
+@media (max-width: 480px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(to bottom, blue, rgb(0, 0, 189));
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+
+    padding: 1rem;
+  }
+  nav.active {
+    display: flex;
+  }
+  .menu-button {
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+    display: flex;
+    width: 50px;
+    width: 50px;
+  }
+}
+main {
+  display: flex;
+  width: 100%;
+  height: 91vh;
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
+}
+.container_01 {
+  display: flex;
+  width: 350px;
+  height: auto;
+  
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.container_intro {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.container_intro h1{
+  font-size: 20px;
+  animation: text_transition 1s;
+}
+.container_intro p {
+  font-size: 15px;
+  font-weight: 200px;
+  text-align: center;
+  animation: text_transition_02 1s;
+}
+.start {
+  display: flex;
+  width: 50%;
+  height: 40px;
+  border: none;
+  background-color: blue;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  animation: flutuar 1s ease-in-out infinite;
+
+}
+.start:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+.start a {
+  text-decoration: none;
+}
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.contact_express {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+.contact_intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  border: none;
+  animation: anima_scroll linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.contact_content {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  border: 1px solid none;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes anima_scroll {
+  0% {
+    opacity: 0;
+    transform: translate(-150px);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+    
+  }
+}
+
+
+/* Telas médias (celulares grandes/tablets pequenos) */
+@media (max-width: 768px) {
+}
+
+/* Telas grandes (tablets grandes/laptops) */
+@media (max-width: 1024px) {
+}
+
+/* Telas extra grandes (desktops grandes) */
+@media (max-width: 1280px) {
+}
